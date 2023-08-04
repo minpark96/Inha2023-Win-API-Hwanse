@@ -1,4 +1,4 @@
-.vs/
-Debug/
-WinAPI_Hwanse/Debug/
-WinAPI_Hwanse/Release/
+.vs/*
+Debug/*
+WinAPI_Hwanse/Debug/*
+WinAPI_Hwanse/Release/*

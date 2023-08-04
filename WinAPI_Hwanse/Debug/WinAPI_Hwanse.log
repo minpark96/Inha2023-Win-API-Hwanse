@@ -1,5 +1,4 @@
-﻿  CCore.cpp
-  CPathMgr.cpp
+﻿  CPlayer.cpp
   CScene_Start.cpp
   CTexture.cpp
   WinAPI_Hwanse.vcxproj -> D:\Work\WinAPI\WinAPI_Hwanse\Output\bin_debug\WinAPI_Hwanse.exe
