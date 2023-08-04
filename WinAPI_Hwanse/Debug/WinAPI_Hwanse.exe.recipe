@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\Work\WinAPI\WinAPI_Hwanse\Debug\WinAPI_Hwanse.exe</FullPath>
+      <FullPath>D:\Work\WinAPI\WinAPI_Hwanse\Output\bin_debug\WinAPI_Hwanse.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
