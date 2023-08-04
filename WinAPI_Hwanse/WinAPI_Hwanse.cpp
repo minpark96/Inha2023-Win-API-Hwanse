@@ -1,13 +1,22 @@
 ﻿// WinAPI_Hwanse.cpp : 애플리케이션에 대한 진입점을 정의합니다.
 //
 
+#ifdef UNICODE
+#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")
+#else
+#pragma comment(linker, "/entry:WinMainCRTStartup /subsystem:console")
+#endif
+
+#include "pch.h"
 #include "framework.h"
 #include "WinAPI_Hwanse.h"
+#include "CCore.h"
 
 #define MAX_LOADSTRING 100
 
 // 전역 변수:
 HINSTANCE hInst;                                // 현재 인스턴스입니다.
+HWND hWnd;
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
 
@@ -38,17 +47,42 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         return FALSE;
     }
 
+    // Core 초기화
+    if (FAILED(CCore::GetInst()->init(hWnd, POINT{ 1280, 768 })))
+    {
+        MessageBox(nullptr, L"Core 객체 초기화 실패", L"ERROR", MB_OK);
+
+        return FALSE;
+    }
+
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_WINAPIHWANSE));
 
     MSG msg;
 
     // 기본 메시지 루프입니다:
-    while (GetMessage(&msg, nullptr, 0, 0))
+    while (true)
     {
-        if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+        if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
         {
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
+            if (msg.message == WM_QUIT)
+            {
+                break;
+            }
+
+            if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+            {
+                TranslateMessage(&msg);
+                DispatchMessage(&msg);
+            }
+        }
+
+        // 메세지가 발생하지 않는 대부분의 시간
+        else
+        {
+            // Game 코드 수행
+            // 디자인 패턴(설계 유형)
+            // 싱글톤 패턴
+            CCore::GetInst()->progress();
         }
     }
 
@@ -97,7 +131,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
    hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
 
-   HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
+   hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
       CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
 
    if (!hWnd)

@@ -6,15 +6,16 @@ class CMissile :
     public CObject
 {
 private:
-    float m_fDir;
+    float m_fTheta;
+
+    Vec2 m_vDir;
 
 public:
-    void SetDir(bool _bUp)
+    void SetDir(float _fTheta) { m_fTheta = _fTheta; }
+    void SetDir(Vec2 _vDir) 
     {
-        if (_bUp)
-            m_fDir = -1.f;
-        else
-            m_fDir = 1.f;
+        m_vDir = _vDir; 
+        m_vDir.Normalize();
     }
 
 public:
