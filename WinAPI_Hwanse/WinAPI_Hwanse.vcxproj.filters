@@ -67,6 +67,9 @@
     <Filter Include="Engine\03. Manager\PathMgr">
       <UniqueIdentifier>{c21913f1-2112-4c0f-aff7-51c63c891f17}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\03. Manager\ResMgr">
+      <UniqueIdentifier>{35bccab0-a4ae-4f70-9088-3b37183aa88f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -130,6 +133,9 @@
     <ClInclude Include="CPathMgr.h">
       <Filter>Engine\03. Manager\PathMgr</Filter>
     </ClInclude>
+    <ClInclude Include="CResMgr.h">
+      <Filter>Engine\03. Manager\ResMgr</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_Hwanse.rc">
@@ -187,6 +193,9 @@
     </ClCompile>
     <ClCompile Include="CPathMgr.cpp">
       <Filter>Engine\03. Manager\PathMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="CResMgr.cpp">
+      <Filter>Engine\03. Manager\ResMgr</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

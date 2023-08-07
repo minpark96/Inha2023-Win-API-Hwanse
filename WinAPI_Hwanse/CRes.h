@@ -12,7 +12,7 @@ private:
 
 public:
 	void SetKey(const wstring& _strKey) { m_strKey = _strKey; }
-	void SetRelativePth(const wstring& _strPath) { m_strRelativePath = _strPath; }
+	void SetRelativePath(const wstring& _strPath) { m_strRelativePath = _strPath; }
 
 	const wstring& GetKey() { return m_strKey; }
 	const wstring& GetRelativePath() { return m_strRelativePath; }
