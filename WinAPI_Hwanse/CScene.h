@@ -31,6 +31,8 @@ public:
 		return m_arrObj[(UINT)GROUP_TYPE::PLAYER].back();
 	}
 
+	const vector<CObject*>& GetGroupObject(GROUP_TYPE _eType) { return m_arrObj[(UINT)_eType]; }
+
 public:
 	CScene();
 	virtual ~CScene();

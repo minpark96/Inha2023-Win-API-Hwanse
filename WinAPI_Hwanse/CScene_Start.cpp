@@ -27,7 +27,7 @@ void CScene_Start::Enter()
 	AddObject(pObj, GROUP_TYPE::PLAYER);
 
 	// 몬스터 배치
-	int iMonCount = 16;
+	int iMonCount = 2;
 	float fMoveDist = 25.f;
 	float fObjScale = 50.f;
 
@@ -40,9 +40,10 @@ void CScene_Start::Enter()
 	for (int i = 0; i < iMonCount; ++i)
 	{
 		// Monster Object 추가
-		pMosterObj = new CMonster;
-		pMosterObj->SetPos(Vec2((fMoveDist + fObjScale / 2.f) + (float)i * fTerm, 50.f));
-		pMosterObj->SetCenterPos(pMosterObj->GetPos());
+		pMosterObj = new CMonster;		
+		pMosterObj->SetCenterPos(Vec2((fMoveDist + fObjScale / 2.f) + (float)i * fTerm, 50.f));
+		pMosterObj->SetPos(Vec2(pMosterObj->GetCenterPos()));
+
 		pMosterObj->SetMoveDistance(fMoveDist);
 		pMosterObj->SetScale(Vec2(fObjScale, fObjScale));
 		AddObject(pMosterObj, GROUP_TYPE::MONSTER);
@@ -50,8 +51,10 @@ void CScene_Start::Enter()
 
 	// 충돌 지정
 	// Player 그룹과 Monster 그룹 간의 충돌체크
+	CCollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::PLAYER, GROUP_TYPE::MONSTER);
 }
 
 void CScene_Start::Exit()
 {
+	CCollisionMgr::GetInst()->Reset();
 }
