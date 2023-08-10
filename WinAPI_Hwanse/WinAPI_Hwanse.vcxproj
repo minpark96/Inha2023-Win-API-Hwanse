@@ -140,6 +140,7 @@
     <ClInclude Include="CCollider.h" />
     <ClInclude Include="CCollisionMgr.h" />
     <ClInclude Include="CCore.h" />
+    <ClInclude Include="CEventMgr.h" />
     <ClInclude Include="CKeyMgr.h" />
     <ClInclude Include="CMissile.h" />
     <ClInclude Include="CMonster.h" />
@@ -156,6 +157,7 @@
     <ClInclude Include="CTimeMgr.h" />
     <ClInclude Include="define.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="func.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="SelectGDI.h" />
@@ -167,6 +169,7 @@
     <ClCompile Include="CCollider.cpp" />
     <ClCompile Include="CCollisionMgr.cpp" />
     <ClCompile Include="CCore.cpp" />
+    <ClCompile Include="CEventMgr.cpp" />
     <ClCompile Include="CKeyMgr.cpp" />
     <ClCompile Include="CMissile.cpp" />
     <ClCompile Include="CMonster.cpp" />
@@ -181,6 +184,7 @@
     <ClCompile Include="CSound.cpp" />
     <ClCompile Include="CTexture.cpp" />
     <ClCompile Include="CTimeMgr.cpp" />
+    <ClCompile Include="func.cpp" />
     <ClCompile Include="SelectGDI.cpp" />
     <ClCompile Include="WinAPI_Hwanse.cpp" />
   </ItemGroup>

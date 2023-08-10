@@ -79,6 +79,9 @@
     <Filter Include="Engine\03. Manager\CollisionMgr">
       <UniqueIdentifier>{7481c53f-9a65-42e3-ac2a-817c9cc37d1a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\03. Manager\EventMgr">
+      <UniqueIdentifier>{a09cc1ce-364b-4b1e-921b-b969115b563d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -154,6 +157,12 @@
     <ClInclude Include="CCollisionMgr.h">
       <Filter>Engine\03. Manager\CollisionMgr</Filter>
     </ClInclude>
+    <ClInclude Include="CEventMgr.h">
+      <Filter>Engine\03. Manager\EventMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="func.h">
+      <Filter>Engine\01. Header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_Hwanse.rc">
@@ -224,5 +233,9 @@
     <ClCompile Include="CCollisionMgr.cpp">
       <Filter>Engine\03. Manager\CollisionMgr</Filter>
     </ClCompile>
+    <ClCompile Include="CEventMgr.cpp">
+      <Filter>Engine\03. Manager\EventMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="func.cpp" />
   </ItemGroup>
 </Project>
