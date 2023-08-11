@@ -89,6 +89,9 @@
     <Filter Include="Default\헤더 파일">
       <UniqueIdentifier>{5ac22b1a-0067-42e9-b2b9-9ed0c6833a26}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\03. Manager\Camera">
+      <UniqueIdentifier>{913ed1ab-4497-4983-85ae-d5d7c9bdff64}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="define.h">
@@ -179,6 +182,9 @@
     <ClInclude Include="WinAPI_Hwanse.h">
       <Filter>Default\헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="CCamera.h">
+      <Filter>Engine\03. Manager\Camera</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_Hwanse.rc">
@@ -263,6 +269,9 @@
     </ClCompile>
     <ClCompile Include="func.cpp">
       <Filter>Engine\01. Header</Filter>
+    </ClCompile>
+    <ClCompile Include="CCamera.cpp">
+      <Filter>Engine\03. Manager\Camera</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

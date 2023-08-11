@@ -1,7 +1,10 @@
 #pragma once
 
+#include "CCamera.h"
+
 class CCollider;
 class CAnimator;
+
 
 class CObject
 {
