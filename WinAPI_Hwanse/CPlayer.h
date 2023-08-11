@@ -7,7 +7,7 @@ class CPlayer :
     public CObject
 {
 private:
-    CTexture*   m_pTex;
+
 
 public:
     virtual void update();
@@ -15,6 +15,9 @@ public:
 
 private:
     void CreateMissile();
+
+
+    CLONE(CPlayer);
 
 public:
     CPlayer();
