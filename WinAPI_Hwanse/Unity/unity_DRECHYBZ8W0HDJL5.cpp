@@ -1,7 +1,4 @@
 
-#include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CRes.cpp"
-
-
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CResMgr.cpp"
 
 
@@ -23,7 +20,13 @@
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CTexture.cpp"
 
 
+#include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CTile.cpp"
+
+
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CTimeMgr.cpp"
+
+
+#include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CUI.cpp"
 
 
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\func.cpp"

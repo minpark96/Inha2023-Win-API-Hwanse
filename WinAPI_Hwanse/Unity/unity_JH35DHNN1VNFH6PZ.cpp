@@ -37,3 +37,6 @@
 
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CPlayer.cpp"
 
+
+#include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CRes.cpp"
+

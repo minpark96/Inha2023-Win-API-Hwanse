@@ -24,15 +24,20 @@
 
 #define PI 3.1415926535f
 
+#define TILE_SIZE 64
+
+
 enum class GROUP_TYPE
 {
 	DEFAULT,
+	TILE,
 	PLAYER,
 	MONSTER,
 	PROJ_PLAYER,
 	PROJ_MONSTER,
 
 
+	UI = 31,
 	END = 32,
 };
 
