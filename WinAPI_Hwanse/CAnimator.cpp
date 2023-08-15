@@ -17,6 +17,11 @@ CAnimator::~CAnimator()
 
 void CAnimator::update()
 {
+
+}
+
+void CAnimator::finalupdate()
+{
 	if (m_pCurAnim != nullptr)
 	{
 		m_pCurAnim->update();

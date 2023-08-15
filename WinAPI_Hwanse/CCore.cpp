@@ -8,6 +8,7 @@
 #include "CCollisionMgr.h"
 #include "CEventMgr.h"
 #include "CCamera.h"
+#include "CUIMgr.h"
 
 CCore::CCore()
 	: m_hWnd(0)
@@ -82,7 +83,8 @@ void CCore::progress()
 	// 충돌체크
 	CCollisionMgr::GetInst()->update();
 
-
+	// UI 이벤트 체크
+	CUIMgr::GetInst()->update();
 
 
 
