@@ -1,4 +1,7 @@
 
+#include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CScene_Tool.cpp"
+
+
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CSound.cpp"
 
 

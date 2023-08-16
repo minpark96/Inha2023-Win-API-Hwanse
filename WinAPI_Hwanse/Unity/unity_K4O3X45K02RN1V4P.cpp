@@ -5,6 +5,9 @@
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CAnimator.cpp"
 
 
+#include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CBtnUI.cpp"
+
+
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CCamera.cpp"
 
 
@@ -24,7 +27,4 @@
 
 
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CMissile.cpp"
-
-
-#include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CMonster.cpp"
 
