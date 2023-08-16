@@ -80,7 +80,29 @@ void CPlayer::update()
 void CPlayer::render(HDC _dc)
 {
 	// 컴포넌트(충돌체, etc...) 가 있는 경우 렌더
-	component_render(_dc);
+	//component_render(_dc);
+	CTexture* pTex = CResMgr::GetInst()->LoadTexture(L"Plane", L"texture\\player.bmp");
+
+	Vec2 vPos = GetPos();
+	vPos = CCamera::GetInst()->GetRenderPos(vPos);
+
+	float width = (float)pTex->Width();
+	float height = (float)pTex->Height();
+
+	BLENDFUNCTION bf = {};
+
+	bf.BlendOp = AC_SRC_OVER;
+	bf.BlendFlags = 0;
+	bf.AlphaFormat = AC_SRC_ALPHA;
+	bf.SourceConstantAlpha = 127;
+
+	AlphaBlend(_dc 
+		, vPos.x - width / 2.f
+		, vPos.y - height / 2.f
+		, width, height
+		, pTex->GetDC()
+		, 0, 0, width, height
+		, bf);
 }
 
 void CPlayer::CreateMissile()
