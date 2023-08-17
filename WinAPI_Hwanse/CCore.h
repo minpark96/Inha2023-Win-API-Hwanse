@@ -5,17 +5,18 @@
 // 객체의 생성을 1개로 제한
 // 어디서든 쉽게 접근 가능
 
+class CTexture;
+
 class CCore
 {
 	// 정적 멤버함수
 	SINGLE(CCore)
 private:
-	HWND	m_hWnd;			// 메인 윈도우 핸들
-	POINT	m_ptResolution; // 메인 윈도우 해상도
-	HDC		m_hDC;			// 메인 윈도우에 Draw 할 DC
+	HWND		m_hWnd;			// 메인 윈도우 핸들
+	POINT		m_ptResolution; // 메인 윈도우 해상도
+	HDC			m_hDC;			// 메인 윈도우에 Draw 할 DC
 
-	HBITMAP m_hBit;
-	HDC		m_memDC;
+	CTexture*	m_pMemTex;		// 백버퍼 텍스쳐
 
 	// 자주 사용하는 GDI Object
 	HBRUSH	m_arrBrush[(UINT)BRUSH_TYPE::END];
