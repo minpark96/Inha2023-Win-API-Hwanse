@@ -107,6 +107,30 @@
     <Filter Include="Engine\04. Object\UI\BtnUI">
       <UniqueIdentifier>{98ef7674-9a5d-464c-8e30-80b0de7541f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\08. Module\AI">
+      <UniqueIdentifier>{897a30ee-48fc-486d-860f-3e9489691447}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\08. Module\AI\State">
+      <UniqueIdentifier>{a9cbf556-8f27-4d73-9656-6846ef4fd66c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\08. Module\AI\State\Idle">
+      <UniqueIdentifier>{ffaf7483-489c-40c7-9a15-8daf81889159}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\08. Module\AI\State\Trace">
+      <UniqueIdentifier>{9ffb8dcb-479f-492f-a6aa-8470be56f217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\08. Module\AI\State\Attack">
+      <UniqueIdentifier>{27b9f693-ae2d-4a76-b8f0-acc06e3d11c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\08. Module\AI\State\Dead">
+      <UniqueIdentifier>{4d5c228f-aebb-4728-9076-39135079454c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\09. Factory">
+      <UniqueIdentifier>{734effc5-1add-426a-a05d-ebee5454c660}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\09. Factory\MonFactory">
+      <UniqueIdentifier>{51a126eb-62ba-4836-8fe7-9fa995d98a20}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="define.h">
@@ -218,6 +242,21 @@
     <ClInclude Include="CBtnUI.h">
       <Filter>Engine\04. Object\UI\BtnUI</Filter>
     </ClInclude>
+    <ClInclude Include="AI.h">
+      <Filter>Engine\08. Module\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="CState.h">
+      <Filter>Engine\08. Module\AI\State</Filter>
+    </ClInclude>
+    <ClInclude Include="CIdleState.h">
+      <Filter>Engine\08. Module\AI\State\Idle</Filter>
+    </ClInclude>
+    <ClInclude Include="CTraceState.h">
+      <Filter>Engine\08. Module\AI\State\Trace</Filter>
+    </ClInclude>
+    <ClInclude Include="CMonFactory.h">
+      <Filter>Engine\09. Factory\MonFactory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_Hwanse.rc">
@@ -320,6 +359,21 @@
     </ClCompile>
     <ClCompile Include="CBtnUI.cpp">
       <Filter>Engine\04. Object\UI\BtnUI</Filter>
+    </ClCompile>
+    <ClCompile Include="AI.cpp">
+      <Filter>Engine\08. Module\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="CState.cpp">
+      <Filter>Engine\08. Module\AI\State</Filter>
+    </ClCompile>
+    <ClCompile Include="CIdleState.cpp">
+      <Filter>Engine\08. Module\AI\State\Idle</Filter>
+    </ClCompile>
+    <ClCompile Include="CTraceState.cpp">
+      <Filter>Engine\08. Module\AI\State\Trace</Filter>
+    </ClCompile>
+    <ClCompile Include="CMonFactory.cpp">
+      <Filter>Engine\09. Factory\MonFactory</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

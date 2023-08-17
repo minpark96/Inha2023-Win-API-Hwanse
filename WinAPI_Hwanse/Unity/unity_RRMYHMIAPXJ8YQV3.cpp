@@ -1,4 +1,7 @@
 
+#include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CMonFactory.cpp"
+
+
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CMonster.cpp"
 
 
@@ -27,4 +30,7 @@
 
 
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CScene_Start.cpp"
+
+
+#include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CScene_Tool.cpp"
 

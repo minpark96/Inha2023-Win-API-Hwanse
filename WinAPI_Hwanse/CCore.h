@@ -22,18 +22,27 @@ private:
 	HBRUSH	m_arrBrush[(UINT)BRUSH_TYPE::END];
 	HPEN	m_arrPen[(UINT)PEN_TYPE::END];
 
+	// 메뉴
+	HMENU	m_hMenu;	// Tool Scene 에서만 사용
+
 
 public:
 	int init(HWND _hWnd, POINT _ptResolution);
 	void progress();
 
 private:
+	void Clear();
 	void CreateBrushPen();
 
+public:
+	void DockMenu();
+	void DivideMenu();
+	void ChangeWindowSize(Vec2 _vResolution, bool _bMenu);
 
 public:
 	HWND GetMainHwnd() { return m_hWnd; }
 	HDC GetMainDC() { return m_hDC; }
+
 	POINT GetResolution() { return m_ptResolution; }
 	HBRUSH GetBrush(BRUSH_TYPE _eType) { return m_arrBrush[(UINT)_eType]; }
 	HPEN GetPen(PEN_TYPE _eType) { return m_arrPen[(UINT)_eType]; }

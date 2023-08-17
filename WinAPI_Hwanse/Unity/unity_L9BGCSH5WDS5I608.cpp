@@ -1,8 +1,8 @@
 
-#include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CScene_Tool.cpp"
-
-
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CSound.cpp"
+
+
+#include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CState.cpp"
 
 
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CTexture.cpp"
@@ -12,6 +12,9 @@
 
 
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CTimeMgr.cpp"
+
+
+#include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CTraceState.cpp"
 
 
 #include "D:\Work\WinAPI\WinAPI_Hwanse\WinAPI_Hwanse\CUI.cpp"

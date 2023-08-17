@@ -14,6 +14,9 @@
 #include "CSceneMgr.h"
 #include "CCamera.h"
 
+#include "AI.h"
+#include "CIdleState.h"
+#include "CTraceState.h"
 
 CScene_Start::CScene_Start()
 {
@@ -44,8 +47,10 @@ void CScene_Start::Enter()
 	// Object 추가
 	CObject* pObj = new CPlayer;
 	pObj->SetPos(Vec2(640.f, 384.f));
-	pObj->SetScale(Vec2(100.f, 100.f));
+	pObj->SetScale(Vec2(128.f, 128.f));
 	AddObject(pObj, GROUP_TYPE::PLAYER);
+
+	RegisterPlayer(pObj);
 
 	/*CObject* pOtherPlayer = pObj->Clone();
 	pOtherPlayer->SetPos(Vec2(740.f, 384.f));
@@ -55,28 +60,9 @@ void CScene_Start::Enter()
 
 
 	// 몬스터 배치
-	int iMonCount = 2;
-	float fMoveDist = 25.f;
-	float fObjScale = 50.f;
-
-
 	Vec2 vResolution = CCore::GetInst()->GetResolution();
-	float fTerm = (vResolution.x - ((fMoveDist + fObjScale / 2.f) * 2)) / (float)(iMonCount - 1);
-
-	CMonster* pMosterObj = nullptr;
-
-	for (int i = 0; i < iMonCount; ++i)
-	{
-		// Monster Object 추가
-		pMosterObj = new CMonster;
-		pMosterObj->SetName(L"Monster");
-		pMosterObj->SetCenterPos(Vec2((fMoveDist + fObjScale / 2.f) + (float)i * fTerm, 50.f));
-		pMosterObj->SetPos(Vec2(pMosterObj->GetCenterPos()));
-
-		pMosterObj->SetMoveDistance(fMoveDist);
-		pMosterObj->SetScale(Vec2(fObjScale, fObjScale));
-		AddObject(pMosterObj, GROUP_TYPE::MONSTER);
-	}
+	CMonster* pMon = CMonFactory::CreateMonster(MON_TYPE::NORMAL, vResolution / 2.f - Vec2(0.f, 300.f));
+	AddObject(pMon, GROUP_TYPE::MONSTER);
 
 	// 타일 로딩
 	//LoadTile(L"Tile\\Start.tile");

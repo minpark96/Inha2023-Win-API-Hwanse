@@ -80,8 +80,9 @@ void CPlayer::update()
 void CPlayer::render(HDC _dc)
 {
 	// 컴포넌트(충돌체, etc...) 가 있는 경우 렌더
-	//component_render(_dc);
-	CTexture* pTex = CResMgr::GetInst()->LoadTexture(L"Plane", L"texture\\player.bmp");
+	component_render(_dc);
+
+	/*CTexture* pTex = CResMgr::GetInst()->LoadTexture(L"Plane", L"texture\\water_idle1.bmp");
 
 	Vec2 vPos = GetPos();
 	vPos = CCamera::GetInst()->GetRenderPos(vPos);
@@ -103,7 +104,7 @@ void CPlayer::render(HDC _dc)
 		, pTex->GetDC()
 		, 0, 0
 		, int(width), int(height)
-		, bf);
+		, bf);*/
 }
 
 void CPlayer::CreateMissile()
