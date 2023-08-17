@@ -20,9 +20,7 @@ void CTraceState::update()
 {
 	// Å¸°ÙÆÃ µÈ Player ¸¦ ÂÑ¾Æ°£´Ù.
 	CPlayer* pPlayer = (CPlayer*)CSceneMgr::GetInst()->GetCurScene()->GetPlayer();
-
 	Vec2 vPlayerPos = pPlayer->GetPos();
-
 	Vec2 vMonPos = GetMonster()->GetPos();
 
 	Vec2 vMonDir = vPlayerPos - vMonPos;
