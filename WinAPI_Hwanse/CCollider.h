@@ -15,6 +15,8 @@ private:
 	UINT		m_iID;			// 충돌체 고유한 ID 값
 	int			m_iCol;
 
+	bool		m_bActive;		// 충돌체 활성화 여부
+
 public:
 	void SetOffsetPos(Vec2 _vPos) { m_vOffsetPos = _vPos; }
 	void SetScale(Vec2 _vScale) { m_vScale = _vScale; }

@@ -134,6 +134,12 @@
     <Filter Include="Engine\07. Component\RigidBody">
       <UniqueIdentifier>{362deaad-165e-4c98-b390-aa298bba7f8f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\07. Component\Gravity">
+      <UniqueIdentifier>{cb454f07-7b60-484c-a45e-0d7d8ff72b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\04. Object\Ground">
+      <UniqueIdentifier>{5cbdd2ec-f6f2-4844-b4e1-1e1728dace43}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="define.h">
@@ -263,6 +269,12 @@
     <ClInclude Include="CRigidBody.h">
       <Filter>Engine\07. Component\RigidBody</Filter>
     </ClInclude>
+    <ClInclude Include="CGravity.h">
+      <Filter>Engine\07. Component\Gravity</Filter>
+    </ClInclude>
+    <ClInclude Include="CGround.h">
+      <Filter>Engine\04. Object\Ground</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_Hwanse.rc">
@@ -383,6 +395,12 @@
     </ClCompile>
     <ClCompile Include="CRigidBody.cpp">
       <Filter>Engine\07. Component\RigidBody</Filter>
+    </ClCompile>
+    <ClCompile Include="CGravity.cpp">
+      <Filter>Engine\07. Component\Gravity</Filter>
+    </ClCompile>
+    <ClCompile Include="CGround.cpp">
+      <Filter>Engine\04. Object\Ground</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

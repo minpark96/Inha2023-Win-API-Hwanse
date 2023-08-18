@@ -6,6 +6,7 @@
 
 #include "CIdleState.h"
 #include "CTraceState.h"
+#include "CRigidBody.h"
 
 CMonster* CMonFactory::CreateMonster(MON_TYPE _eType, Vec2 _vPos)
 {
@@ -27,11 +28,14 @@ CMonster* CMonFactory::CreateMonster(MON_TYPE _eType, Vec2 _vPos)
 
 		pMon->SetMonInfo(info);
 
-		AI* pAI = new AI;
+		pMon->CreateRigidBody();
+		pMon->GetRigidBody()->SetMass(1.f);
+
+		/*AI* pAI = new AI;
 		pAI->AddState(new CIdleState);
 		pAI->AddState(new CTraceState);
 		pAI->SetCurState(MON_STATE::IDLE);
-		pMon->SetAI(pAI);
+		pMon->SetAI(pAI);*/
 	}
 
 		break;
